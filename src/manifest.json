@@ -54,20 +54,13 @@
     "webRequest",
     "webRequestBlocking"
   ],
-<<<<<<< HEAD:Extension Compiler/Extension/manifest.json
-<<<<<<< HEAD
-  "version": "13.60",
+
   "applications": {
     "gecko": {
       "id":"{906ccb14-ed34-43a0-9b41-1142e8060aee}",
       "strict_min_version": "57.0",
       "update_url": "https://raw.githubusercontent.com/krystian3w/NanoDefenderFirefox/master/Extension%20Compiler/updates.json"
     }
-  }
-=======
-  "version": "13.61"
->>>>>>> fd898bcd1a882d86788e8c76e6e21e573c0ca3df
-=======
+  },
   "version": "14.0"
->>>>>>> 47d5f401318b07955a140ad61d702b4e914a524c:src/manifest.json
 }
