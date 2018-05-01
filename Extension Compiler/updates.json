@@ -3,10 +3,10 @@
   "{906ccb14-ed34-43a0-9b41-1142e8060aee}": {
    "updates": [
     {
-     "version": "14.1",
+     "version": "14.2",
      "applications": { "gecko": { "strict_min_version": "57.0" } },
-     "update_info_url": "https://github.com/krystian3w/NanoDefenderFirefox/tree/14.1",
-     "update_link": "https://github.com/krystian3w/NanoDefenderFirefox/releases/download/14.1/nano_defender-14.1-an.fx.xpi"
+     "update_info_url": "https://github.com/krystian3w/NanoDefenderFirefox/tree/14.2",
+     "update_link": "https://github.com/krystian3w/NanoDefenderFirefox/releases/download/14.2/nano_defender-14.2-an.fx.xpi"
     }
    ]
   }
