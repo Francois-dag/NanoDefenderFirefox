@@ -4,10 +4,10 @@
     "scripts": [
       "common.js",
       "platform/chromium-vars.js",
-      "background/1-background-core.js",
+      "background/core.js",
       "platform/chromium-background.js",
-      "background/2-background-rules.js",
-      "background/3-background-debug.js"
+      "background/rules.js",
+      "background/debug.js"
     ]
   },
   "browser_action": {
@@ -22,14 +22,14 @@
       "all_frames": true,
       "js": [
         "common.js",
-        "content/1-content-domlib.js",
-        "content/2-content-core.js",
-        "content/3-content-rules-1-common.js",
-        "content/3-content-rules-2-specific.js",
-        "content/3-content-rules-3-sticky.js",
-        "content/3-content-rules-4-proprietary.js",
-        "content/4-content-debug.js",
-        "content/5-ubo-extra.js"
+        "libdom.js",
+        "content/core.js",
+        "content/rules-common.js",
+        "content/rules-specific.js",
+        "content/rules-sticky.js",
+        "content/rules-proprietary.js",
+        "content/debug.js",
+        "content/ubo-extra.js"
       ],
       "match_about_blank": true,
       "matches": [
@@ -55,20 +55,12 @@
     "webRequest",
     "webRequestBlocking"
   ],
-<<<<<<< HEAD:Extension Compiler/Extension/manifest.json
-<<<<<<< HEAD
-  "version": "13.60",
   "applications": {
     "gecko": {
       "id":"{906ccb14-ed34-43a0-9b41-1142e8060aee}",
       "strict_min_version": "57.0",
       "update_url": "https://raw.githubusercontent.com/krystian3w/NanoDefenderFirefox/master/Extension%20Compiler/updates.json"
     }
-  }
-=======
-  "version": "13.61"
->>>>>>> fd898bcd1a882d86788e8c76e6e21e573c0ca3df
-=======
-  "version": "14.0"
->>>>>>> 47d5f401318b07955a140ad61d702b4e914a524c:src/manifest.json
+  },
+  "version": "14.1"
 }
