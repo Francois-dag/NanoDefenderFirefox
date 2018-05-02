@@ -529,7 +529,7 @@ if (a.domCmp(["uol.com.br"])) {
 }
 if (a.domCmp(["gamer.com.tw"])) {
     a.readOnly("AntiAd", null);
-};
+}
 if (a.domCmp(["armorgames.com"])) {
     a.readOnly("ga_detect", null);
 }
@@ -648,7 +648,7 @@ if (a.domCmp(["bolor-toli.com"])) {
 if (a.domCmp(["vivo.sx"])) {
     a.on("load", () => {
         $("#alert-throttle").remove();
-        $("button#access").attr("id", null, true).attr("disabled", null, true).html("Continue To Video");
+        $("button#access").rmAttr("id").rmAttr("disabled").html("Continue To Video");
         setTimeout(() => {
             $("input[name='throttle']").remove();
         }, 1000);
