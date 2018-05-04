@@ -55,7 +55,6 @@
     "webRequest",
     "webRequestBlocking"
   ],
-<<<<<<< HEAD
   "applications": {
     "gecko": {
       "id":"{906ccb14-ed34-43a0-9b41-1142e8060aee}",
