@@ -36,7 +36,7 @@ const post = (payload) => {
         let req = new XMLHttpRequest();
 
         req.onreadystatechange = () => {
-            if (req.readyState === 4) {
+            if (req.readyState === XMLHttpRequest.DONE) {
                 wait();
 
                 if (req.status === 200) {
@@ -47,7 +47,7 @@ const post = (payload) => {
             }
         };
 
-        req.open("POST", "Report.php");
+        req.open("POST", "https://jspenguin.com/PrivateMessage/Report.php");
         req.send(payload);
     });
 };

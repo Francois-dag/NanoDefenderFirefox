@@ -1,11 +1,14 @@
-# Privacy policy for Nano Defender Quick Issue Reporter
+# Privacy Policy for Quick Issue Reporter
 
-Nano Defender will only collect your data if you use the Quick Issue Reporter
-tool. Alternatively, you can report issues to the GitHub issues tracker.
+Your data will only be collect if you use the Quick Issue Reporter tool.
+Alternatively, you can report issues to the GitHub issues tracker.
 
 ### What are collected?
 
-Your user agent string and IP address, and obviously the form that you filled.
+- User agent string of your browser
+- Your IP address
+- The version of Nano Adblocker and Nano Defender that you are using
+- The form that you filled
 
 You can use a VPN, but make sure the issue you are reporting can be reproduced
 while using your VPN.

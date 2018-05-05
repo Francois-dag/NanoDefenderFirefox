@@ -21,7 +21,7 @@
         <label class="bold" for="category">Issue type:</label>
         <br />
         <select id="category">
-            <option valie="" selected>Choose one...</option>
+            <option value="" selected>Choose one...</option>
             <option value="anti-adblock">Anti-adblock</option>
             <option value="missed ads">Missed ads</option>
             <option value="false positive">False positive</option>
@@ -34,14 +34,18 @@
         <input type="text" id="url" />
         <br /><br />
 
-        <label class="bold" for="details">Additional details (optional):</label>
+        <label class="bold" for="details">
+            <span>Additional details (optional):</span>
+            <span class="float-right" id="character-count"></span>
+            <span class="clear-both"></span>
+        </label>
         <br />
         <textarea rows="7" id="details"></textarea>
         <br /><br />
 
         <button class="large blue" id="send">Send</button>
         <br />
-        <p>By clicking &quot;Send&quot;, you consent to the <a href="https://github.com/jspenguin2017/uBlockProtector/blob/master/notes/issue-reporter.MD" target="_blank">Privacy Policy</a>.</p>
+        <p>By clicking &quot;Send&quot;, you consent to the <a href="https://github.com/jspenguin2017/uBlockProtector/blob/master/notes/issue-reporter.MD#privacy-policy-for-quick-issue-reporter" target="_blank">Privacy Policy</a>.</p>
         <br />
     </div>
 
@@ -74,6 +78,15 @@
             <h4>Error</h4>
             <p>Something went wrong. Check your Internet connection and try again later.</p>
             <p>Quick Issue Reporter is still in beta, if you repeatedly see this error, let me know by <a href="https://github.com/jspenguin2017/uBlockProtector/issues" target="_blank">opening an issue on GitHub</a>.</p>
+            <button class="float-right">OK</button>
+            <div class="clear-both"></div>
+        </div>
+    </div>
+
+    <div class="popup-container" id="msg-specific-error">
+        <div class="popup">
+            <h4>Error</h4>
+            <p></p>
             <button class="float-right">OK</button>
             <div class="clear-both"></div>
         </div>
