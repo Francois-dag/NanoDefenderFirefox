@@ -10,13 +10,5 @@
  */
 var a = {};
 
-//@pragma-if-debug
-/**
- * Whether the extension is loaded in debug mode.
- * @const {boolean}
- */
-a.debugMode = true;
-//@pragma-end-if
-
 a.isFirefox = true;
 a.debugMode = false;
