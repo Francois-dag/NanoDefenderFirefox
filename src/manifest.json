@@ -62,5 +62,8 @@
       "update_url": "https://raw.githubusercontent.com/krystian3w/NanoDefenderFirefox/master/Extension%20Compiler/updates.json"
     }
   },
-  "version": "14.11"
+  "version": "14.12",
+  "web_accessible_resources": [
+    "resources/*"
+  ]
 }
