@@ -13,8 +13,14 @@ Nano Defender is built using
 
 ## Credits
 
-[Octicons](https://github.com/primer/octicons/)
+Nano Defender uses open source code from the following projects (alphabetical):
+
+[anti-adblock-killer](https://github.com/reek/anti-adblock-killer)
+
+[octicons](https://github.com/primer/octicons/)
+
+[uAssets](https://github.com/uBlockOrigin/uAssets)
+
+[uBlock](https://github.com/gorhill/uBlock)
 
 [uBO-Extra](https://github.com/gorhill/uBO-Extra)
-
-Credits for solutions are in the source code.

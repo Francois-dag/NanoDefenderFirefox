@@ -102,7 +102,8 @@
         <!-- Work in progress -->
 
         <p><strong>uplynk.com</strong></p>
-        <p>Preroll ads not blocked. Help wanted.</p>
+        <p>Affects: cwtv.com, fox.com, nbc.com, viceland.com</p>
+        <p>Preroll ads not blocked.</p>
         <p><code>Geo Lock (United States of America)</code></p>
         <p>
             <a href="https://www.nbc.com/the-voice/video/next-kelly-clarkson-ups-the-game/3613327" target="_blank">Test link 1</a>
@@ -118,8 +119,8 @@
         <br />
 
         <p><strong>hulu.com</strong></p>
-        <p>The video player will sometimes show a placeholder with a timer when ads fail to load. Video does continues normally when the timer finishes. Help wanted.</p>
-        <p>The video player will sometimes show a screen that asks the user what type of ads he wants. Help wanted.</p>
+        <p>Video player shows a placeholder with a timer <i>on rare occasion</i> when ads fail to load. Video does continues normally when the timer finishes.</p>
+        <p>Video player <i>sometimes</i> shows a screen that asks the user what type of ads he wants.</p>
         <p><code>Account Required</code> <code>Geo Lock (United States of America)</code> <code>Detects VPN</code></p>
         <p>
             <a href="https://www.hulu.com/watch/132768?d=AnimePlanet" target="_blank">Test link 1</a>
@@ -130,9 +131,11 @@
         </p>
         <br />
 
+        <!-- Low priority -->
+
         <p><strong>crackle.com</strong></p>
-        <p>Video sometimes stuck at loading, refreshing the page usually corrects the issue. Help wanted.</p>
-        <p><code>Geo Lock (United States of America)</code></p>
+        <p>Video sometimes gets stuck at loading, refreshing the page corrects the issue.</p>
+        <p><code>Low Priority (Minor Issue)</code> <code>Geo Lock (United States of America)</code></p>
         <p>
             <a href="https://www.crackle.com/scary-movie-3/2498104" target="_blank">Test link 1</a>
         </p>
@@ -141,10 +144,8 @@
         </p>
         <br />
 
-        <!-- Low priority -->
-
         <p><strong>channel4.com</strong></p>
-        <p>The Flash based video player will show a placeholder with a timer when ads fail to load. Video does continue normally once the timer finishes. Help wanted.</p>
+        <p>Flash based video player shows a placeholder with a timer when ads fail to load. Video does continue normally once the timer finishes.</p>
         <p><code>Low Priority (Flash)</code> <code>Geo Lock (United Kingdom)</code></p>
         <p>
             <a href="http://www.channel4.com/programmes/britain-at-low-tide/on-demand/64335-001" target="_blank">Test link 1</a>
@@ -156,20 +157,32 @@
 
         <!-- Probably will not fix in a long time -->
 
-        <p><strong>adageindia.in, bombaytimes.com, businessinsider.in, gizmodo.in, iamgujarat.com, idiva.com, in.techradar.com, indiatimes.com, timesofindia.com, lifehacker.co.in, mensxp.com, samayam.com, gadgetsnow.com</strong></p>
-        <p>It can take up to 1 second to hide the ads, also the solution is quite inefficient. Help wanted.</p>
+        <p><strong>colombiaonline.com</strong></p>
+        <p>Affects: adageindia.in, bombaytimes.com, businessinsider.in, gadgetsnow.com, gizmodo.in, iamgujarat.com, idiva.com, in.techradar.com, indiatimes.com, lifehacker.co.in, mensxp.com, samayam.com, timesofindia.com</p>
+        <p>Ads take up to 1 second to hide, also the solution is quite inefficient.</p>
         <p>
             <a href="http://timesofindia.indiatimes.com/" target="_blank">Test link 1</a>
             <a href="http://www.lifehacker.co.in/" target="_blank">Test link 2</a>
         </p>
         <p>
             <a href="https://github.com/NanoAdblocker/NanoFilters/issues/57" target="_blank">Issue 1</a>
+            <a href="https://github.com/uBlockOrigin/uAssets/issues/247" target="_blank">Issue 2</a>
+        </p>
+        <br />
+
+        <p><strong>anonymousemail.me, [NSFW] avgle.com</strong></p>
+        <p>Solutions are patched as soon as they come out.</p>
+        <p>
+            <a href="https://anonymousemail.me/" target="_blank">Test link 1</a>
+        </p>
+        <p>
+            <a href="https://github.com/uBlockOrigin/uAssets/issues/2130" target="_blank">Issue 1</a>
         </p>
         <br />
 
         <p><strong>lolalytics.com, socketloop.com</strong></p>
-        <p>After months of intense cat and mouse game, I have decided to give up. This is unfortunate but this is the only way to go. I highly recommend you to stop visiting these websites. If that is not an option, you can load Nano Defender in debug mode into Chrome or Chromium to activate proprietary solutions.</p>
-        <p>Click <a href="https://github.com/jspenguin2017/uBlockProtector/blob/master/src/content/rules-proprietary.js" target="_blank">here</a> to learn more, make sure to read and understand all the instructions.</p>
+        <p>Solutions are patched as soon as they come out, but there are proprietary solutions available that <i>may</i> still work.</p>
+        <p>You can load Nano Defender in debug mode into Chrome or Chromium to activate proprietary solutions. Click <a href="https://github.com/jspenguin2017/uBlockProtector/blob/master/src/content/rules-proprietary.js" target="_blank">here</a> to learn more, make sure to read and understand all the instructions.</p>
         <p>The code for loading these proprietary solutions will not uploaded to the extension stores.</p>
         <br />
 
@@ -184,11 +197,14 @@
         <h2>Reporting an issue</h2>
 
         <p>Before opening an issue, <strong>always</strong> check if there is already another issue opened.</p>
+        <p>If you are using Edge, report all issues to <a href="https://github.com/NanoAdblocker/NanoFilters/issues" target="_blank">NanoFilters</a>.</p>
+
         <p>For missed ads and tracking scripts, report to <a href="https://github.com/easylist/easylist/issues" target="_blank">EasyList</a>.</p>
         <p>For hard anti-adblock (allow ads or leave type) and popups, report to <a href="https://github.com/uBlockOrigin/uAssets" target="_blank">uAssets</a>.</p>
         <p>For cookie notices, report to <a href="https://github.com/ryanbr/fanboy-adblock/issues" target="_blank">Fanboy</a>.</p>
         <p>For any other filter issues, report to <a href="https://github.com/NanoAdblocker/NanoFilters/issues" target="_blank">NanoFilters</a>.</p>
         <p>For bugs, suggestions, and questions, report to <a href="https://github.com/NanoAdblocker/NanoCore/issues" target="_blank">NanoCore</a>.</p>
+
         <p>The version of uBlock Origin that Nano Adblocker uses can be found in About section of Nano Dashboard. I am aware that Nano Adblocker is different, but when it comes to filters, most of the times things work the same. If you have been told by contributors at uAssets that your issue could not be reproduced, <strong>ping @jspenguin2017</strong> or report it again to <a href="https://github.com/NanoAdblocker/NanoFilters/issues" target="_blank">NanoFilters</a>.</p>
     </div>
 
