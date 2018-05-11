@@ -40,14 +40,13 @@ const updateDetailsLimit = () => {
 };
 
 /**
- * The name of the host app.
+ * The name and version of the host app.
  * @const {string}
  */
 const appName = (() => {
     const manifest = chrome.runtime.getManifest();
     return manifest.name + " " + manifest.version;
 })();
-
 /**
  * Show a specific error message.
  * @function
@@ -56,6 +55,47 @@ const appName = (() => {
 const showError = (msg) => {
     $("#msg-specific-error p").text(msg);
     $("#msg-specific-error").addClass("open");
+};
+
+/**
+ * Domains that are known to be working and those that are known to be broken.
+ * @const {Array.<string>}
+ * @const {Array.<string>}
+ */
+const knownGood = [
+    "addons.mozilla.org",
+    "chrome.google.com",
+    "www.microsoft.com",
+
+    "github.com",
+    "jspenguin.com",
+    "jspenguin2017.github.io",
+
+    "derstandard.at",
+    "soft98.ir",
+];
+const knownBad = [
+    "avgle.com", // NSFW
+];
+/**
+ * Check if a domain matches one of the matchers.
+ * @param {string} domain - The domain to test.
+ * @param {Array.<string>} matchers - The matchers.
+ * @return {boolean} True if the domain matches, false otherwise.
+ */
+const domCmp = (domain, matchers) => {
+    for (const d of matchers) {
+        if (
+            domain.endsWith(d) &&
+            (
+                domain.length === d.length ||
+                domain.charAt(domain.length - d.length - 1) === '.'
+            )
+        ) {
+            return true;
+        }
+    }
+    return false;
 };
 
 
@@ -71,16 +111,22 @@ $("#send").on("click", async () => {
         showError("Please select an issue type.");
         return;
     }
-    if (
-        !url || !/^https?:/.test(url) ||
-        // Whitelist extension stores
-        url.startsWith("https://chrome.google.com/") ||
-        url.startsWith("https://www.microsoft.com/") ||
-        url.startsWith("https://addons.mozilla.org/")
-    ) {
+
+    let domain = /^https?:\/\/([^/]+)/.exec(url);
+    if (!domain) {
         showError("Please enter a valid URL.");
         return;
     }
+    domain = domain[1];
+    if (domCmp(domain, knownGood)) {
+        $("#msg-known-good").addClass("open");
+        return;
+    }
+    if (domCmp(domain, knownBad)) {
+        $("#msg-known-bad").addClass("open");
+        return;
+    }
+
     if (details.length > detailsLimit) {
         showError("Additional details can be at most " +
             detailsLimit.toString() + " characters long.");
@@ -106,17 +152,15 @@ $("#send").on("click", async () => {
     if (response === "ok") {
         localStorage.setItem(storageKeyLastReport, Date.now());
         $("#msg-report-sent").addClass("open");
+        $("#main").addClass("hidden");
     } else {
         console.error(response);
         $("#msg-generic-error").addClass("open");
     }
 });
 
-$("#msg-generic-error button").on("click", () => {
-    $("#msg-generic-error").rmClass("open");
-});
-$("#msg-specific-error button").on("click", () => {
-    $("#msg-specific-error").rmClass("open");
+$(".popup-container button.float-right").on("click", function () {
+    this.parentNode.parentNode.classList.remove("open");
 });
 
 {
@@ -132,9 +176,9 @@ $("#msg-specific-error button").on("click", () => {
         const now = Date.now();
         if (typeof lastReport === "number" && lastReport + rateLimit > now) {
             $("#msg-rate-limited").addClass("open");
+        } else {
+            $("#main").rmClass("hidden");
         }
-
-        $("#main").rmClass("hidden");
     };
 
     if (/^\?\d{1,15}$/.test(location.search)) {

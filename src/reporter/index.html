@@ -17,6 +17,7 @@
 <body>
     <div class="container hidden" id="main">
         <h2>Quick Issue Reporter (Beta)</h2>
+        <p>Have you checked <a href="https://jspenguin2017.github.io/uBlockProtector/#known-issues" target="_blank">known issues</a>?</p>
 
         <label class="bold" for="category">Issue type:</label>
         <br />
@@ -70,6 +71,25 @@
         <div class="popup">
             <h4>Rate Limited</h4>
             <p>Quick Issue Reporter is still in beta, you can only submit one report every 15 minutes for now.</p>
+        </div>
+    </div>
+
+    <div class="popup-container" id="msg-known-good">
+        <div class="popup">
+            <h4>Message</h4>
+            <p>The website that you are reporting is known to be working, please check the <a href="https://jspenguin2017.github.io/uBlockProtector/#troubleshooting" target="_blank">troubleshooting guide</a>.</p>
+            <p>If you are absolutely certain that the website is no longer working, please report it <a href="https://github.com/NanoAdblocker/NanoFilters/issues" target="_blank">here</a>.</p>
+            <button class="float-right">OK</button>
+            <div class="clear-both"></div>
+        </div>
+    </div>
+
+    <div class="popup-container" id="msg-known-bad">
+        <div class="popup">
+            <h4>Message</h4>
+            <p>This is a known issue, for more information, please click <a href="https://jspenguin2017.github.io/uBlockProtector/#known-issues" target="_blank">here</a>.</p>
+            <button class="float-right">OK</button>
+            <div class="clear-both"></div>
         </div>
     </div>
 

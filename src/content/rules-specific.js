@@ -14,7 +14,7 @@ if (a.domCmp(["voici.fr", "programme-tv.net"])) {
 }
 if (a.domCmp(["chip.de", "moviepilot.com", "nowloading.co", "champions.co", "trendblog.net",
     "immobilienscout24.de", "theage.com.au", "thestudentroom.co.uk", "drugs.com", "tucson.com",
-    "ottawacitizen.com"])) {
+    "ottawacitizen.com", "wusa9.com"])) {
     // https://github.com/jspenguin2017/uBlockProtector/issues/271
     // https://github.com/jspenguin2017/uBlockProtector/issues/363
     a.noAccess("stop");
@@ -992,9 +992,6 @@ if (a.domCmp(["kisscartoon.me", "kisscartoon.se"])) {
     a.ready(() => {
         $("iframe[id^='adsIfrme']").remove();
     });
-}
-if (a.domCmp(["openload.co", "openload.io", "openload.tv", "oload.stream"])) {
-    a.readOnly("popAdsLoaded", true);
 }
 if (a.domCmp(["youwatch.org", "chouhaa.info", "ahzahg6ohb.com"])) {
     a.ready(() => {
