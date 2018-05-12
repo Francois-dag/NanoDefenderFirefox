@@ -2566,6 +2566,14 @@ if (a.domCmp(["identi.li"])) {
                     window._decrypt.objeto = null;
                     window._decrypt.open();
                 });
+                window.$("button.link-d").unbind("click").click(function () {
+                    let d = this.dataset.link;
+                    while (!d.includes("%")) {
+                        d = window.atob(d);
+                    }
+                    d = window.decodeURIComponent(d);
+                    window.open(d);
+                });
             }
         });
     });
@@ -3073,6 +3081,13 @@ if (a.domCmp(["boost.ink"])) {
                     .split(window.String.fromCharCode(15))[0];
                 window.location.href = decryptedText;
             }
+        });
+    });
+}
+if (a.domCmp(["3dzone.link"])) {
+    a.ready(() => {
+        $("a").filter(":scope > img[src^='https://authedmine.com/']").each((e) => {
+            e.textContent = e.href;
         });
     });
 }
