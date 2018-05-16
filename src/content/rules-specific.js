@@ -3058,16 +3058,39 @@ if (a.domCmp(["videolab.io"])) {
         };
     });
 }
-if (a.domCmp(["boost.ink"])) {
-    // https://github.com/jspenguin2017/uBlockProtector/issues/908
-    a.readOnly("onMobile", true);
-    a.filter("open");
-}
 if (a.domCmp(["3dzone.link"])) {
     a.ready(() => {
         $("a").filter(":scope > img[src^='https://authedmine.com/']").each((e) => {
             e.textContent = e.href;
         });
+    });
+}
+if (a.domCmp(["boost.ink"])) {
+    // https://github.com/jspenguin2017/uBlockProtector/issues/908
+    a.inject(() => {
+        "use strict";
+        const _addEventListener = window.EventTarget.prototype.addEventListener;
+        const _addEventListener_string = _addEventListener.toString();
+        const addEventListener = function (ev, func, ...rest) {
+            if (ev === "blur" || ev === "focus") {
+                return;
+            }
+            return _addEventListener.call(this, ev, func, ...rest);
+        };
+        window.EventTarget.prototype.addEventListener = addEventListener;
+
+        const _toString = window.Function.prototype.toString;
+        const _toString_string = _toString.toString();
+        const toString = function (...args) {
+            if (this === addEventListener) {
+                return _addEventListener_string;
+            } else if (this === toString) {
+                return _toString_string;
+            } else {
+                return _toString.apply(this, args);
+            }
+        };
+        window.Function.prototype.toString = toString;
     });
 }
 
