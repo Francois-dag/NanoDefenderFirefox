@@ -42,7 +42,30 @@ if (a.debugMode) {
 
 // Rules
 if (a.debugMode) {
-    // Nothing for now
+    {
+        // uplynk.com
+        // https://github.com/uBlockOrigin/uAssets/issues/772
+        const reBlock = /^https?:\/\/content[^.]*?\.uplynk\.com\/api\/v3\/preplay2\//;
+        const reStrip = /^https?:\/\/content[^.]*?\.uplynk\.com\/[^.?]*\.m3u8\?/;
+
+        a.dynamicServer(
+            [
+                "*://uplynk.com/*",
+                "*://*.uplynk.com/*",
+            ],
+            [
+                "xmlhttprequest",
+            ],
+            (details) => {
+                if (reBlock.test(details.url)) {
+                    // return { cancel: true };
+                } else if (reStrip.test(details.url)) {
+                    const i = details.url.indexOf('?');
+                    return { redirectUrl: details.url.substring(0, i) };
+                }
+            },
+        );
+    }
 }
 
 //@pragma-end-if
