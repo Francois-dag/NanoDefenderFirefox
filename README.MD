@@ -2,7 +2,7 @@
 
 An anti-adblock defuser for Nano Adblocker and uBlock Origin
 
-**jspenguin2017 still find Maintainers for Firefox build**!
+#### The @jspenguin2017 still find Maintainers for Firefox build!
 
 ![Popup Panel Screenshot](https://i.imgur.com/xEtuqxH.png)
 
