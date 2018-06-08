@@ -29,54 +29,6 @@
 ! ======================
 ! ===== Missed Ads =====
 ! ======================
-! === Google
-! === https://github.com/jspenguin2017/uBlockProtector/issues/245
-||d.0emm.com^$third-party
-||d.0emn.com^$third-party
-||d.0enm.com^$third-party
-||d.0fmm.com^$third-party
-||d.0mme.com^$third-party
-||d.1emn.com^$third-party
-||d.1enm.com^$third-party
-||d.2enm.com^$third-party
-||d.3enm.com^$third-party
-||d.4666.ch^$third-party
-||d.8d1f.com^$third-party
-||d.9emn.com^$third-party
-||d.e0mn.com^$third-party
-||d.em0n.com^$third-party
-||d.emn0.com^$third-party
-||d.m80fg.com^$third-party
-||d.mdf91.com^$third-party
-||d.mn0e.com^$third-party
-||d.mpk01.com^$third-party
-||d.ndf81.com^$third-party
-||d.nfd81.com^$third-party
-||d.nn0e.com^$third-party
-||d.rpts.org^$third-party
-||w.0emm.com^$third-party
-||w.0emn.com^$third-party
-||w.0enm.com^$third-party
-||w.0fmm.com^$third-party
-||w.0mme.com^$third-party
-||w.1emn.com^$third-party
-||w.1enm.com^$third-party
-||w.2enm.com^$third-party
-||w.3enm.com^$third-party
-||w.4666.ch^$third-party
-||w.8d1f.com^$third-party
-||w.9emn.com^$third-party
-||w.e0mn.com^$third-party
-||w.em0n.com^$third-party
-||w.emn0.com^$third-party
-||w.m80fg.com^$third-party
-||w.mdf91.com^$third-party
-||w.mn0e.com^$third-party
-||w.mpk01.com^$third-party
-||w.ndf81.com^$third-party
-||w.nfd81.com^$third-party
-||w.nn0e.com^$third-party
-||w.rpts.org^$third-party
 ! === AdSense, DoubleClick
 ||googlesyndication.com^$important,domain=short.am|clubedohardware.com.br|receive-a-sms.com
 ||doubleclick.net^$important,domain=aetv.com|history.com|mylifetime.com|receive-a-sms.com
@@ -355,9 +307,6 @@ animesync.tv##.modal-adblock
 watchfree.to##+js(abort-on-property-read.js, UAParser)
 ! === firstonetv.eu, firstone.tv
 firstonetv.eu,firstone.tv##+js(noeval-if.js, Please disable your Adblocker)
-! === streamwoop.tv
-|https://$third-party,script,domain=streamwoop.tv,badfilter
-|https://$third-party,xmlhttprequest,domain=streamwoop.tv,badfilter
 ! === vooxe.com
 vooxe.com###blockedAddons
 ! === gentecheesisterealmente.com
@@ -388,14 +337,10 @@ kitguru.net##.gofollow
 vidnow.to###adplayer
 ! === gigaleecher.com
 ||gigaleecher.com/templates/plugmod/giga.js$script
-! === photobucket.com
-|https://$third-party,script,domain=photobucket.com,badfilter
 ! === diariodenavarra.es
 diariodenavarra.es###abMsgWrap
 ! === NSFW! darmowe-pornosy.pl, polskie-aktorki-porno.pl
 darmowe-pornosy.pl,polskie-aktorki-porno.pl#@#.myTestAd
-! === hothardware.com
-|https://$third-party,script,domain=hothardware.com,badfilter
 ! === themarker.com
 themarker.com###ad-block-wrapper
 ! === jsuol.com.br
@@ -471,8 +416,6 @@ couponcabin.com###adblocker-reminder
 tlz.de##.ab-shader
 ! === 1tv.ru
 ||v.adfox.ru^$xmlhttprequest,redirect=nooptext,domain=1tv.ru
-! === uptobox.com, uptostream.com
-|https://$third-party,script,domain=uptobox.com|uptostream.com,badfilter
 ! === 1tiny.net
 1tiny.net##+js(abort-on-property-read.js, jQuery.ready)
 ! === thevideo.me
